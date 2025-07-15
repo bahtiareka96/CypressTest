@@ -1,0 +1,22 @@
+{
+    "validUser": {
+      "firstName": "Kelompok 4 - Anggi",
+      "lastName": "Sanber 63",
+      "password": "Sanbercode63"
+    },
+    "invalidUser": {
+      "firstName": "Kelompok 4",
+      "lastName": "Sanber 63",
+      "email": "kelompok4@sanber.com",
+      "password": "Sanbercode63"
+    },
+    "validUserLogin": {
+    "email": "aula.lajupeduli@gmail.com",
+    "password": "Auls123!"
+    },
+     "invalidUserLogin": {
+    "email": "auls.lajupeduli@gmail.com",
+    "password": "Auls123!"
+  }
+    
+  }
