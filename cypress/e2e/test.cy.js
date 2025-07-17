@@ -4,7 +4,7 @@ const loginPage = new LoginPage();
 describe('Open Website', () => {
 
   beforeEach(() => {
-    cy.fixture('users').as('loginData');
+    cy.fixture('users.json').as('loginData');
   });
 
   it('get into homepage', () => {
@@ -25,16 +25,23 @@ describe('Open Website', () => {
     loginPage.enterEmail(this.loginData.validUserLogin.email);
     loginPage.enterPassword(this.loginData.validUserLogin.password);
     loginPage.submit();
-    cy.get('.greet.welcome').should('contain', 'Welcome,');
+    loginPage.SuccValidation();
   });
 
-  it('login failed - invalid email', () => {
-    cy.visit(Cypress.env('loginUrl'));
-    cy.get('#email').type('auls.lajupeduli@gmail.com');
-    cy.get('#pass').type('Auls123!');
-    cy.get('#send2').click();
-    cy.get('.message.error').should('be.visible')
-      .and('contain', 'The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.');
+  it('login failed - invalid email', function () {
+    loginPage.visit();
+    loginPage.enterEmail(this.loginData.invalidUserLogin.email);
+    loginPage.enterPassword(this.loginData.invalidUserLogin.password);
+    loginPage.submit();
+    loginPage.FailValidation();
   });
+
+  it.only('login failed - empty email', function () {
+    loginPage.visit();
+    loginPage.enterEmail(this.loginData.blankEmail.email);
+    loginPage.enterPassword(this.loginData.blankEmail.password);
+    loginPage.submit();
+    loginPage.NoEmailorPassValidation();
+  })
 
 });

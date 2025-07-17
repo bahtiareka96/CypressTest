@@ -11,12 +11,19 @@
       "password": "Sanbercode63"
     },
     "validUserLogin": {
-    "email": "aula.lajupeduli@gmail.com",
-    "password": "Auls123!"
+      "email": "aula.lajupeduli@gmail.com",
+      "password": "Auls123!"
     },
-     "invalidUserLogin": {
-    "email": "auls.lajupeduli@gmail.com",
-    "password": "Auls123!"
-  }
-    
+    "invalidUserLogin": {
+      "email": "auls.lajupeduli@gmail.com",
+      "password": "Auls123!"
+    },
+    "blankEmail": {
+      "email" : "",
+      "password" : "Auls123!" 
+    },
+    "blankPassword" : {
+      "email" : "aula.lajupeduli@gmail.com",
+      "password" : ""
+    }
   }
