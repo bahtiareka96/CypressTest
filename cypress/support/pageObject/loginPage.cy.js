@@ -1,7 +1,6 @@
-// support/pageObject/loginPage.cy.js
 
 class LoginPage {
-  visit() {
+  visitLogin() {
     cy.visit(Cypress.env('loginUrl'));
   }
 
@@ -19,10 +18,16 @@ enterEmail(email) {
 }
 
 enterPassword(password) {
-  // if (password === undefined || password === null) {
-  //   throw new Error('Email cannot be null or undefined');
-  // }
-  cy.get('#pass').type(password);
+  if (password === null || password === undefined) {
+    throw new Error('Password cannot be null or undefined')
+  }
+  const input = cy.get('#pass');
+  if (password === '') {
+    input.clear();
+  } else {
+    input.type(password);
+  }
+  return input;
 }
 
   submit() {
@@ -38,8 +43,13 @@ enterPassword(password) {
       .and('contain', 'The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.');
   }
 
-  NoEmailorPassValidation() {
+  EmailError() {
     cy.get('#email-error').should('be.visible')
+      .and('contain', 'This is a required field.')
+  }
+
+  PassError() {
+    cy.get('#pass-error').should('be.visible')
       .and('contain', 'This is a required field.')
   }
 }

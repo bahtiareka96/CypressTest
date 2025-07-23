@@ -1,7 +1,7 @@
-import LoginPage from "../support/pageObject/loginPage.cy";
+import LoginPage from "../support/pageObject/loginPage.cy.js";
 const loginPage = new LoginPage();
 
-describe('Open Website', () => {
+describe('Login Test', () => {
 
   beforeEach(() => {
     cy.fixture('users.json').as('loginData');

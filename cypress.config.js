@@ -8,6 +8,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       config.baseUrl = "https://magento.softwaretestingboard.com/";
       config.env.loginUrl = "https://magento.softwaretestingboard.com/customer/account/login/";
+      config.env.createUser = "https://magento.softwaretestingboard.com/customer/account/create/";
 
       // Return the updated config object
       return config;

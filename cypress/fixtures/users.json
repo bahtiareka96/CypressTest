@@ -1,29 +1,47 @@
 {
-    "validUser": {
-      "firstName": "Kelompok 4 - Anggi",
+  "createUsers": [
+    {
+      "firstName": "Testing",
       "lastName": "Sanber 63",
-      "password": "Sanbercode63"
+      "email": "testing321@testing.com",
+      "password": "Sanbercode63",
+      "confirmPass": "Sanbercode63"
     },
-    "invalidUser": {
-      "firstName": "Kelompok 4",
-      "lastName": "Sanber 63",
-      "email": "kelompok4@sanber.com",
-      "password": "Sanbercode63"
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "password": "Password123!",
+      "confirmPass": "Password123!"
     },
-    "validUserLogin": {
-      "email": "aula.lajupeduli@gmail.com",
-      "password": "Auls123!"
-    },
-    "invalidUserLogin": {
-      "email": "auls.lajupeduli@gmail.com",
-      "password": "Auls123!"
-    },
-    "blankEmail": {
-      "email" : "",
-      "password" : "Auls123!" 
-    },
-    "blankPassword" : {
-      "email" : "aula.lajupeduli@gmail.com",
-      "password" : ""
+    {
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane.smith@example.com",
+      "password": "SecurePass456!",
+      "confirmPass": "SecurePass456!"
     }
+  ],
+  "invalidUser": {
+    "firstName": "Kelompok 4",
+    "lastName": "Sanber 63",
+    "email": "kelompok4@sanber.com",
+    "password": "Sanbercode63"
+  },
+  "validUserLogin": {
+    "email": "aula.lajupeduli@gmail.com",
+    "password": "Auls123!"
+  },
+  "invalidUserLogin": {
+    "email": "auls.lajupeduli@gmail.com",
+    "password": "Auls123!"
+  },
+  "blankEmail": {
+    "email": "",
+    "password": "Auls123!"
+  },
+  "blankPassword": {
+    "email": "aula.lajupeduli@gmail.com",
+    "password": ""
   }
+}
